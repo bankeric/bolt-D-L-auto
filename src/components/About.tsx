@@ -94,6 +94,15 @@ export default function About() {
 
         <div className="bg-gradient-to-br from-[#1B3A5F] to-slate-900 rounded-3xl p-12 mb-16 text-white">
           <h3 className="text-3xl font-bold text-center mb-12">Quy Trình Sửa Chữa</h3>
+
+          <div className="mb-12">
+            <img
+              src="/image copy.png"
+              alt="Quy trình sửa chữa của D&L Auto"
+              className="w-full rounded-2xl shadow-2xl"
+            />
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {repairProcess.map((step, index) => (
               <div key={index} className="text-center">
