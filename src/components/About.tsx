@@ -116,32 +116,6 @@ export default function About() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-8">Dịch Vụ Sửa Chữa</h3>
-            <div className="space-y-6">
-              {services.map((service, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border-2 border-gray-100 hover:border-[#1B3A5F] hover:shadow-lg transition-all duration-300">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h4>
-                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-8">Dịch Vụ Bao Gồm</h3>
-            <div className="space-y-6">
-              {ourServices.map((service, index) => (
-                <div key={index} className="bg-gradient-to-br from-[#E31E24]/5 to-[#1B3A5F]/5 rounded-xl p-6 border-2 border-[#E31E24]/20 hover:border-[#E31E24] hover:shadow-lg transition-all duration-300">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h4>
-                  <p className="text-gray-700 leading-relaxed">{service.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
         <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-12 border-2 border-gray-100">
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Cam Kết Của Chúng Tôi</h3>
           <div className="grid md:grid-cols-2 gap-8">
