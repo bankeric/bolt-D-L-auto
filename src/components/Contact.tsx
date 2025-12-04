@@ -50,6 +50,7 @@ export default function Contact() {
       title: 'Điện Thoại',
       content: '(857) 999-3979 (Nguyệt Anh)',
       subContent: '(857) 544-3757 (Phương Hoàng)',
+      thirdContent: '(617) 618-6789',
       color: 'text-[#1B3A5F]',
       bgColor: 'bg-[#1B3A5F]/10'
     },
@@ -100,6 +101,9 @@ export default function Contact() {
                       <div className="font-bold text-gray-300 mb-1">{info.title}</div>
                       <div className="font-bold text-white">{info.content}</div>
                       <div className="text-gray-400 text-sm">{info.subContent}</div>
+                      {'thirdContent' in info && (
+                        <div className="text-gray-400 text-sm">{info.thirdContent}</div>
+                      )}
                     </div>
                   </div>
                 ))}
