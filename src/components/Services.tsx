@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Wrench, Shield, FileCheck, Car, Truck, Users, X } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 interface ServiceDetail {
   title: string;
@@ -8,127 +9,74 @@ interface ServiceDetail {
 }
 
 export default function Services() {
+  const { t } = useTranslation();
   const [selectedService, setSelectedService] = useState<ServiceDetail | null>(null);
 
   const services = [
     {
       icon: Wrench,
-      title: 'Đội ngũ Sửa xe chất lượng',
-      subtitle: 'Làm xe CŨ như MỚI',
+      title: t.services.qualityRepair.title,
+      subtitle: t.services.qualityRepair.subtitle,
       color: 'from-[#E31E24] to-[#c41820]',
       details: {
-        title: 'Dịch Vụ Sửa Chữa Chuyên Nghiệp - Làm Xe CŨ Như MỚI',
-        description: 'Thời gian ngừng hoạt động là thời gian bị lãng phí. Đội ngũ kỹ thuật viên được đào tạo bài bản của chúng tôi sẽ đưa xe của bạn trở lại trạng thái sẵn sàng và hoạt động trở lại nhanh nhất có thể.',
-        details: [
-          'Làm mới xe cũ giúp tối đa hóa giá trị bán lại và cải thiện xe cũ để bán nhanh',
-          'D&L AUTO giúp bạn chọn giải pháp tiết kiệm chi phí, tối đa hóa lợi nhuận bất kể giá trị xe',
-          'Chúng tôi phục hồi cấu trúc xe và làm cho chúng trông như mới để bạn có thể bán được giá cao',
-          'Chúng tôi áp dụng sửa chữa cần thiết và đánh bóng vừa đủ cho xe cũ và xe giá trị thấp để bạn có thể bán nhanh',
-          'Sửa chữa cấu trúc và thân xe chuyên nghiệp, sau đó sơn và hoàn thiện',
-          'Thiết bị và kỹ thuật hiện đại nhất'
-        ]
+        title: t.services.qualityRepair.title,
+        description: t.services.qualityRepair.description,
+        details: t.services.qualityRepair.details
       }
     },
     {
       icon: Shield,
-      title: 'Giải quyết vấn đề Bảo Hiểm',
-      subtitle: 'Hỗ Trợ Bảo Hiểm & Tai Nạn',
+      title: t.services.insurance.title,
+      subtitle: t.services.insurance.subtitle,
       color: 'from-[#1B3A5F] to-[#153049]',
       details: {
-        title: 'Giải Quyết Bảo Hiểm & Tai Nạn',
-        description: 'D&L Auto có đội ngũ bảo hiểm có kinh nghiệm và trình độ cao nhất trong ngành, tận tâm xử lý mọi nhu cầu của bạn nhanh chóng và hiệu quả với dịch vụ cá nhân và chuyên nghiệp.',
-        details: [
-          'Tổng cộng hơn 10 năm kinh nghiệm trực tiếp với công ty bảo hiểm',
-          'Điểm liên hệ duy nhất cho các công ty bảo hiểm',
-          'Vận hành cơ sở sửa chữa va chạm giúp các công ty bảo hiểm làm việc dễ dàng và hiệu quả',
-          'Dịch vụ sửa chữa va chạm và sửa chữa điểm hoàn chỉnh',
-          'Khách hàng kiểm soát quá trình yêu cầu bồi thường',
-          'Truy cập trực tiếp vào phụ tùng OEM và aftermarket',
-          'Quan hệ DRP với các công ty bảo hiểm lớn',
-          'Kiểm soát chi phí - tiết kiệm tiền với một nguồn, một cuộc gọi, một hóa đơn'
-        ]
+        title: t.services.insurance.title,
+        description: t.services.insurance.description,
+        details: t.services.insurance.details
       }
     },
     {
       icon: FileCheck,
-      title: 'Làm Inspection',
-      subtitle: 'Có người giải thích bằng tiếng Việt',
+      title: t.services.inspection.title,
+      subtitle: t.services.inspection.subtitle,
       color: 'from-[#E31E24] to-[#1B3A5F]',
       details: {
-        title: 'Dịch Vụ Kiểm Tra Xe',
-        description: 'Kiểm tra xe toàn diện với hỗ trợ tiếng Việt. Chúng tôi đảm bảo bạn hiểu rõ mọi chi tiết về tình trạng xe của mình.',
-        details: [
-          'Dịch vụ kiểm tra xe hoàn chỉnh',
-          'Giải thích và hỗ trợ đầy đủ bằng tiếng Việt',
-          'Báo cáo kiểm tra chi tiết',
-          'Kiểm tra trước khi mua xe',
-          'Kiểm tra an toàn hàng năm',
-          'Kiểm tra khí thải',
-          'Giao tiếp rõ ràng bằng ngôn ngữ của bạn',
-          'Đánh giá chuyên nghiệp và kỹ lưỡng'
-        ]
+        title: t.services.inspection.title,
+        description: t.services.inspection.description,
+        details: t.services.inspection.details
       }
     },
     {
       icon: Car,
-      title: 'Có Xe Rental cho khách',
-      subtitle: 'Ngay và Liền',
+      title: t.services.rental.title,
+      subtitle: t.services.rental.subtitle,
       color: 'from-[#1B3A5F] to-[#0f2438]',
       details: {
-        title: 'Dịch Vụ Cho Thuê Xe Ngay Lập Tức',
-        description: 'Khi xe của bạn đang được sửa chữa, chúng tôi cung cấp dịch vụ cho thuê xe ngay lập tức để bạn có thể tiếp tục di chuyển.',
-        details: [
-          'Xe cho thuê có sẵn tại chỗ',
-          'Có sẵn ngay lập tức - không phải chờ đợi',
-          'Xe sạch sẽ và được bảo dưỡng tốt',
-          'Giá thuê cạnh tranh',
-          'Có thể phối hợp với bảo hiểm',
-          'Tùy chọn thuê theo ngày, theo tuần',
-          'Nhiều loại xe để lựa chọn',
-          'Giao và nhận xe thuận tiện'
-        ]
+        title: t.services.rental.title,
+        description: t.services.rental.description,
+        details: t.services.rental.details
       }
     },
     {
       icon: Truck,
-      title: 'Có Xe Tow cho khách khi cần',
-      subtitle: 'Không ngại đường xa, 24/7',
+      title: t.services.towing.title,
+      subtitle: t.services.towing.subtitle,
       color: 'from-[#E31E24] to-[#1B3A5F]',
       details: {
-        title: 'Dịch Vụ Kéo Xe 24/7 - Không Ngại Đường Xa',
-        description: 'Dịch vụ kéo xe của chúng tôi luôn sẵn sàng suốt ngày đêm, sẵn sàng giúp đỡ bạn bất cứ khi nào và ở đâu bạn cần.',
-        details: [
-          'Dịch vụ kéo xe khẩn cấp 24/7',
-          'Không ngại đường xa - chúng tôi đến nơi bạn cần',
-          'Nhân viên kéo xe chuyên nghiệp và có kinh nghiệm',
-          'Vận chuyển xe an toàn và bảo mật',
-          'Có xe kéo sàn phẳng',
-          'Dịch vụ kéo xe máy',
-          'Hỗ trợ tại hiện trường tai nạn',
-          'Thời gian phản hồi nhanh',
-          'Phối hợp yêu cầu bảo hiểm'
-        ]
+        title: t.services.towing.title,
+        description: t.services.towing.description,
+        details: t.services.towing.details
       }
     },
     {
       icon: Users,
-      title: 'Đội ngũ nhân viên chăm sóc khách hàng',
-      subtitle: 'Thân thiện, nhiệt tình, đặt khách hàng lên hàng đầu',
+      title: t.services.customerService.title,
+      subtitle: t.services.customerService.subtitle,
       color: 'from-[#1B3A5F] to-[#E31E24]',
       details: {
-        title: 'Dịch Vụ Khách Hàng Xuất Sắc',
-        description: 'Đội ngũ chăm sóc khách hàng của chúng tôi thân thiện, nhiệt tình và luôn đặt khách hàng lên hàng đầu.',
-        details: [
-          'Có nhân viên nói tiếng Việt',
-          'Môi trường thân thiện và chào đón',
-          'Giải thích kiên nhẫn và kỹ lưỡng',
-          'Sự hài lòng của khách hàng là ưu tiên hàng đầu',
-          'Giao tiếp rõ ràng ở mọi bước',
-          'Lịch trình linh hoạt để đáp ứng nhu cầu của bạn',
-          'Dịch vụ theo dõi sau khi sửa chữa',
-          'Đại diện chăm sóc khách hàng tận tâm',
-          'Chúng tôi đối xử với mọi khách hàng như gia đình'
-        ]
+        title: t.services.customerService.title,
+        description: t.services.customerService.description,
+        details: t.services.customerService.details
       }
     }
   ];
@@ -155,13 +103,13 @@ export default function Services() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-block bg-[#E31E24]/10 text-[#E31E24] px-4 py-2 rounded-full text-sm font-bold mb-4">
-              DỊCH VỤ CỦA CHÚNG TÔI
+              {t.services.badge}
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Dịch Vụ Toàn Diện<br />Cho Cộng Đồng Boston
+              {t.services.title}<br />{t.services.titleLine2}
             </h2>
             <p className="text-xl text-gray-600">
-              Phục vụ người Việt tại Boston với đội ngũ nói tiếng Việt và dịch vụ chuyên nghiệp
+              {t.services.subtitle}
             </p>
           </div>
 
@@ -183,7 +131,7 @@ export default function Services() {
                   <p className="text-gray-600 leading-relaxed mb-6">{service.subtitle}</p>
 
                   <button className="w-full py-3 bg-gray-50 hover:bg-gray-100 text-gray-900 font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
-                    <span>Tìm Hiểu Thêm</span>
+                    <span>{t.services.learnMore}</span>
                     <span>→</span>
                   </button>
                 </div>
@@ -226,7 +174,7 @@ export default function Services() {
                   onClick={closeModal}
                   className="block w-full bg-gradient-to-r from-[#E31E24] to-[#1B3A5F] text-white py-4 rounded-lg hover:from-[#c41820] hover:to-[#153049] transition-all transform hover:scale-105 font-bold text-center"
                 >
-                  Đặt Lịch Hẹn Ngay
+                  {t.services.bookNow}
                 </a>
               </div>
             </div>
