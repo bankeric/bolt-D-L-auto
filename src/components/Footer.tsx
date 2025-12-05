@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Facebook, Youtube } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Instagram } from 'lucide-react';
 
 export default function Footer() {
   const services = [
@@ -46,7 +46,7 @@ export default function Footer() {
                 href="#"
                 className="w-10 h-10 bg-white/10 hover:bg-[#E31E24] rounded-lg flex items-center justify-center transition-all transform hover:scale-110"
               >
-                <Youtube className="w-5 h-5" />
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
