@@ -41,34 +41,34 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: MapPin,
-      title: t.contact.info.address.title,
-      content: t.contact.info.address.line1,
-      subContent: t.contact.info.address.line2,
+      title: t.contact.info.address,
+      content: t.contact.info.addressLine1,
+      subContent: t.contact.info.addressLine2,
       color: 'text-[#E31E24]',
       bgColor: 'bg-[#E31E24]/10'
     },
     {
       icon: Phone,
-      title: t.contact.info.phone.title,
-      content: t.contact.info.phone.line1,
-      subContent: t.contact.info.phone.line2,
-      thirdContent: t.contact.info.phone.line3,
+      title: t.contact.info.phone,
+      content: t.contact.info.phoneLine1,
+      subContent: t.contact.info.phoneLine2,
+      thirdContent: t.contact.info.phoneLine3,
       color: 'text-[#1B3A5F]',
       bgColor: 'bg-[#1B3A5F]/10'
     },
     {
       icon: Mail,
-      title: t.contact.info.email.title,
-      content: t.contact.info.email.line1,
-      subContent: t.contact.info.email.line2,
+      title: t.contact.info.email,
+      content: t.contact.info.emailLine1,
+      subContent: t.contact.info.emailLine2,
       color: 'text-[#1B3A5F]',
       bgColor: 'bg-[#1B3A5F]/10'
     },
     {
       icon: Clock,
-      title: t.contact.info.hours.title,
-      content: t.contact.info.hours.line1,
-      subContent: t.contact.info.hours.line2,
+      title: t.contact.info.hours,
+      content: t.contact.info.hoursLine1,
+      subContent: t.contact.info.hoursLine2,
       color: 'text-[#E31E24]',
       bgColor: 'bg-[#E31E24]/10'
     }
@@ -142,7 +142,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-2">
-                    {t.contact.form.name.label}
+                    {t.contact.form.name}
                   </label>
                   <input
                     type="text"
@@ -152,14 +152,14 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-all"
-                    placeholder={t.contact.form.name.placeholder}
+                    placeholder={t.contact.form.namePlaceholder}
                   />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-2">
-                      {t.contact.form.phone.label}
+                      {t.contact.form.phone}
                     </label>
                     <input
                       type="tel"
@@ -169,13 +169,13 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-all"
-                      placeholder={t.contact.form.phone.placeholder}
+                      placeholder={t.contact.form.phonePlaceholder}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2">
-                      {t.contact.form.email.label}
+                      {t.contact.form.email}
                     </label>
                     <input
                       type="email"
@@ -184,7 +184,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-all"
-                      placeholder={t.contact.form.email.placeholder}
+                      placeholder={t.contact.form.emailPlaceholder}
                     />
                   </div>
                 </div>
@@ -192,7 +192,7 @@ export default function Contact() {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="carModel" className="block text-sm font-bold text-gray-700 mb-2">
-                      {t.contact.form.carModel.label}
+                      {t.contact.form.carModel}
                     </label>
                     <input
                       type="text"
@@ -201,13 +201,13 @@ export default function Contact() {
                       value={formData.carModel}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-all"
-                      placeholder={t.contact.form.carModel.placeholder}
+                      placeholder={t.contact.form.carModelPlaceholder}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="service" className="block text-sm font-bold text-gray-700 mb-2">
-                      {t.contact.form.service.label}
+                      {t.contact.form.service}
                     </label>
                     <select
                       id="service"
@@ -216,20 +216,20 @@ export default function Contact() {
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-all bg-white"
                     >
-                      <option value="">{t.contact.form.service.placeholder}</option>
-                      <option value="repair">{t.contact.form.service.options.repair}</option>
-                      <option value="diagnostic">{t.contact.form.service.options.diagnostic}</option>
-                      <option value="upgrade">{t.contact.form.service.options.upgrade}</option>
-                      <option value="maintenance">{t.contact.form.service.options.maintenance}</option>
-                      <option value="fuel">{t.contact.form.service.options.fuel}</option>
-                      <option value="cooling">{t.contact.form.service.options.cooling}</option>
+                      <option value="">{t.contact.form.servicePlaceholder}</option>
+                      <option value="repair">{t.contact.form.serviceOptions.repair}</option>
+                      <option value="diagnostic">{t.contact.form.serviceOptions.diagnostic}</option>
+                      <option value="upgrade">{t.contact.form.serviceOptions.upgrade}</option>
+                      <option value="maintenance">{t.contact.form.serviceOptions.maintenance}</option>
+                      <option value="fuel">{t.contact.form.serviceOptions.fuel}</option>
+                      <option value="cooling">{t.contact.form.serviceOptions.cooling}</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-2">
-                    {t.contact.form.message.label}
+                    {t.contact.form.message}
                   </label>
                   <textarea
                     id="message"
@@ -238,7 +238,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-all resize-none"
-                    placeholder={t.contact.form.message.placeholder}
+                    placeholder={t.contact.form.messagePlaceholder}
                   ></textarea>
                 </div>
 
