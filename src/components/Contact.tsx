@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
 export default function Contact() {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',

@@ -3,7 +3,7 @@ import { ChevronDown, HelpCircle } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
 export default function FAQ() {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (

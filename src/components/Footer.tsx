@@ -2,7 +2,7 @@ import { MapPin, Phone, Mail, Facebook, Instagram } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   return (
     <footer className="bg-gradient-to-br from-[#1B3A5F] via-slate-800 to-slate-900 text-white pt-16 pb-8">

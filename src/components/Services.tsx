@@ -9,7 +9,7 @@ interface ServiceDetail {
 }
 
 export default function Services() {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const [selectedService, setSelectedService] = useState<ServiceDetail | null>(null);
 
   const services = [

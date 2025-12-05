@@ -2,7 +2,7 @@ import { Star } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
 export default function Testimonials() {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   const beforeAfterProjects = t.testimonials.projects.map((project: any, index: number) => ({
     beforeImage: [`/1a.jpg`, `/2a.jpg`, `/3a.jpg`][index],

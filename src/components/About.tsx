@@ -2,7 +2,7 @@ import { CheckCircle2, Search, Wrench, Sparkles, ThumbsUp } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
 export default function About() {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   const processIcons = [Search, Wrench, Sparkles, ThumbsUp];
 
