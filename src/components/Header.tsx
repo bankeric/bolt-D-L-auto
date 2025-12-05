@@ -1,14 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Phone, Menu, X, Globe } from 'lucide-react';
-import { useLanguage, Language } from '../contexts/LanguageContext';
-import { translations } from '../translations';
+import { Phone, Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-  const { language, setLanguage } = useLanguage();
-  const t = translations[language];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,19 +17,6 @@ export default function Header() {
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
   };
-
-  const handleLanguageChange = (lang: Language) => {
-    setLanguage(lang);
-    setIsLangMenuOpen(false);
-  };
-
-  const languages = [
-    { code: 'en' as Language, label: 'English', flag: '🇺🇸' },
-    { code: 'vi' as Language, label: 'Tiếng Việt', flag: '🇻🇳' },
-    { code: 'es' as Language, label: 'Español', flag: '🇪🇸' }
-  ];
-
-  const currentLanguage = languages.find(lang => lang.code === language);
 
   return (
     <header
@@ -59,55 +41,26 @@ export default function Header() {
               href="#services"
               className="text-gray-800 hover:text-[#E31E24] transition-colors font-medium text-sm"
             >
-              {t.nav.services}
+              Dịch Vụ
             </a>
             <a
               href="#about"
               className="text-gray-800 hover:text-[#E31E24] transition-colors font-medium text-sm"
             >
-              {t.nav.about}
+              Về Chúng Tôi
             </a>
             <a
               href="#testimonials"
               className="text-gray-800 hover:text-[#E31E24] transition-colors font-medium text-sm"
             >
-              {t.nav.testimonials}
+              Đánh Giá
             </a>
             <a
               href="#faq"
               className="text-gray-800 hover:text-[#E31E24] transition-colors font-medium text-sm"
             >
-              {t.nav.faq}
+              FAQ
             </a>
-
-            <div className="relative">
-              <button
-                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className="flex items-center space-x-2 px-4 py-2.5 bg-gradient-to-r from-[#1B3A5F] to-[#2a4a6f] text-white rounded-lg hover:from-[#153049] hover:to-[#1f3554] transition-all transform hover:scale-105 font-semibold shadow-md text-sm"
-              >
-                <Globe className="w-4 h-4" />
-                <span>{currentLanguage?.flag}</span>
-                <span>{currentLanguage?.label}</span>
-              </button>
-
-              {isLangMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => handleLanguageChange(lang.code)}
-                      className={`w-full flex items-center space-x-3 px-4 py-3 hover:bg-gray-50 transition-colors ${
-                        language === lang.code ? 'bg-[#E31E24]/10 text-[#E31E24] font-bold' : 'text-gray-700'
-                      }`}
-                    >
-                      <span className="text-xl">{lang.flag}</span>
-                      <span>{lang.label}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
             <a
               href="tel:+18579993979"
               className="bg-[#E31E24] text-white px-5 py-2.5 rounded-lg hover:bg-[#c41820] transition-all transform hover:scale-105 font-semibold flex items-center space-x-2 shadow-md text-sm"
@@ -118,38 +71,12 @@ export default function Header() {
           </div>
 
           <div className="md:hidden flex items-center space-x-2">
-            <div className="relative">
-              <button
-                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className="flex items-center space-x-1 px-3 py-2 bg-gradient-to-r from-[#1B3A5F] to-[#2a4a6f] text-white rounded-lg font-semibold text-sm"
-              >
-                <Globe className="w-4 h-4" />
-                <span>{currentLanguage?.flag}</span>
-              </button>
-
-              {isLangMenuOpen && (
-                <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => handleLanguageChange(lang.code)}
-                      className={`w-full flex items-center space-x-2 px-3 py-2 hover:bg-gray-50 transition-colors text-sm ${
-                        language === lang.code ? 'bg-[#E31E24]/10 text-[#E31E24] font-bold' : 'text-gray-700'
-                      }`}
-                    >
-                      <span>{lang.flag}</span>
-                      <span>{lang.label}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
             <a
               href="tel:+18579993979"
               className="bg-[#E31E24] text-white px-4 py-2 rounded-lg hover:bg-[#c41820] transition-all font-semibold flex items-center space-x-2 text-sm"
             >
               <Phone className="w-4 h-4" />
+              <span>(857) 999-3979</span>
             </a>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -170,28 +97,28 @@ export default function Header() {
                 onClick={handleLinkClick}
                 className="text-gray-800 hover:text-[#E31E24] transition-colors font-medium text-sm py-2"
               >
-                {t.nav.services}
+                Dịch Vụ
               </a>
               <a
                 href="#about"
                 onClick={handleLinkClick}
                 className="text-gray-800 hover:text-[#E31E24] transition-colors font-medium text-sm py-2"
               >
-                {t.nav.about}
+                Về Chúng Tôi
               </a>
               <a
                 href="#testimonials"
                 onClick={handleLinkClick}
                 className="text-gray-800 hover:text-[#E31E24] transition-colors font-medium text-sm py-2"
               >
-                {t.nav.testimonials}
+                Đánh Giá
               </a>
               <a
                 href="#faq"
                 onClick={handleLinkClick}
                 className="text-gray-800 hover:text-[#E31E24] transition-colors font-medium text-sm py-2"
               >
-                {t.nav.faq}
+                FAQ
               </a>
             </div>
           </div>

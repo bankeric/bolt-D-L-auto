@@ -1,35 +1,32 @@
 import { Users, Wrench, Clock, Award } from 'lucide-react';
-import { useTranslation } from '../hooks/useTranslation';
 
 export default function Stats() {
-  const t = useTranslation();
-
   const stats = [
     {
       icon: Users,
       value: '10+',
-      label: t.stats.yearsServing,
+      label: 'Năm Phục Vụ Boston',
       color: 'text-[#1B3A5F]',
       bgColor: 'bg-[#1B3A5F]/10'
     },
     {
       icon: Wrench,
       value: '1000+',
-      label: t.stats.vehiclesRepaired,
+      label: 'Xe Được Sửa Chữa',
       color: 'text-[#E31E24]',
       bgColor: 'bg-[#E31E24]/10'
     },
     {
       icon: Clock,
       value: '98%',
-      label: t.stats.onTimeCompletion,
+      label: 'Hoàn Thành Đúng Hẹn',
       color: 'text-green-600',
       bgColor: 'bg-green-50'
     },
     {
       icon: Award,
       value: '100%',
-      label: t.stats.serviceSatisfaction,
+      label: 'Hài Lòng Dịch Vụ',
       color: 'text-[#1B3A5F]',
       bgColor: 'bg-[#1B3A5F]/10'
     }
