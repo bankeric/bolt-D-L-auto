@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -39,34 +41,34 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: MapPin,
-      title: 'Địa Chỉ',
-      content: '1856 Dorchester Ave',
-      subContent: '780 Blue Hill Ave',
+      title: t.contact.info.address.title,
+      content: t.contact.info.address.line1,
+      subContent: t.contact.info.address.line2,
       color: 'text-[#E31E24]',
       bgColor: 'bg-[#E31E24]/10'
     },
     {
       icon: Phone,
-      title: 'Điện Thoại',
-      content: '(857) 999-3979 (Nguyệt Anh)',
-      subContent: '(857) 544-3757 (Phương Hoàng)',
-      thirdContent: '(617) 618-6789',
+      title: t.contact.info.phone.title,
+      content: t.contact.info.phone.line1,
+      subContent: t.contact.info.phone.line2,
+      thirdContent: t.contact.info.phone.line3,
       color: 'text-[#1B3A5F]',
       bgColor: 'bg-[#1B3A5F]/10'
     },
     {
       icon: Mail,
-      title: 'Email',
-      content: 'info@dlautoboston.com',
-      subContent: 'contact@dlautoboston.com',
+      title: t.contact.info.email.title,
+      content: t.contact.info.email.line1,
+      subContent: t.contact.info.email.line2,
       color: 'text-[#1B3A5F]',
       bgColor: 'bg-[#1B3A5F]/10'
     },
     {
       icon: Clock,
-      title: 'Giờ Làm Việc',
-      content: 'Mon - Sat: 7:00 AM - 7:00 PM',
-      subContent: 'Sunday: 9:00 AM - 5:00 PM',
+      title: t.contact.info.hours.title,
+      content: t.contact.info.hours.line1,
+      subContent: t.contact.info.hours.line2,
       color: 'text-[#E31E24]',
       bgColor: 'bg-[#E31E24]/10'
     }
@@ -77,20 +79,20 @@ export default function Contact() {
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block bg-[#E31E24]/10 text-[#E31E24] px-4 py-2 rounded-full text-sm font-bold mb-4">
-            LIÊN HỆ VỚI CHÚNG TÔI
+            {t.contact.badge}
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Đặt Lịch Hẹn<br />Ngay Hôm Nay
+            {t.contact.title}<br />{t.contact.titleLine2}
           </h2>
           <p className="text-xl text-gray-600">
-            Chúng tôi luôn sẵn sàng tư vấn và hỗ trợ bạn
+            {t.contact.subtitle}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div>
             <div className="bg-gradient-to-br from-[#1B3A5F] to-slate-900 rounded-2xl p-8 text-white mb-8">
-              <h3 className="text-2xl font-bold mb-6">Thông Tin Liên Hệ</h3>
+              <h3 className="text-2xl font-bold mb-6">{t.contact.contactInfo}</h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start space-x-4 group">
@@ -111,16 +113,9 @@ export default function Contact() {
             </div>
 
             <div className="bg-gradient-to-br from-[#E31E24]/5 to-[#1B3A5F]/5 rounded-2xl p-8 border border-[#E31E24]/20">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Tại Sao Chọn D&L Auto?</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t.contact.whyChoose}</h3>
               <ul className="space-y-3">
-                {[
-                  'Vietnamese-speaking staff',
-                  'State-of-the-art equipment',
-                  'Insurance claims handling',
-                  'Rental cars available',
-                  '24/7 towing service',
-                  'Transparent pricing'
-                ].map((item, index) => (
+                {t.contact.reasons.map((item, index) => (
                   <li key={index} className="flex items-center space-x-3">
                     <CheckCircle2 className="w-5 h-5 text-[#E31E24] flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>
@@ -136,18 +131,18 @@ export default function Contact() {
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 animate-bounce">
                   <CheckCircle2 className="w-12 h-12 text-green-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Cảm Ơn Bạn!</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{t.contact.thankYou}</h3>
                 <p className="text-gray-600 max-w-md">
-                  Chúng tôi đã nhận được thông tin. Đội ngũ của chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.
+                  {t.contact.thankYouMessage}
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Gửi Yêu Cầu</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">{t.contact.formTitle}</h3>
 
                 <div>
                   <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-2">
-                    Họ và Tên *
+                    {t.contact.form.name.label}
                   </label>
                   <input
                     type="text"
@@ -157,14 +152,14 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-all"
-                    placeholder="Nguyễn Văn A"
+                    placeholder={t.contact.form.name.placeholder}
                   />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-2">
-                      Số Điện Thoại *
+                      {t.contact.form.phone.label}
                     </label>
                     <input
                       type="tel"
@@ -174,13 +169,13 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-all"
-                      placeholder="0123 456 789"
+                      placeholder={t.contact.form.phone.placeholder}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2">
-                      Email
+                      {t.contact.form.email.label}
                     </label>
                     <input
                       type="email"
@@ -189,7 +184,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-all"
-                      placeholder="email@example.com"
+                      placeholder={t.contact.form.email.placeholder}
                     />
                   </div>
                 </div>
@@ -197,7 +192,7 @@ export default function Contact() {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="carModel" className="block text-sm font-bold text-gray-700 mb-2">
-                      Dòng Xe
+                      {t.contact.form.carModel.label}
                     </label>
                     <input
                       type="text"
@@ -206,13 +201,13 @@ export default function Contact() {
                       value={formData.carModel}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-all"
-                      placeholder="VD: Honda CR-V 2020"
+                      placeholder={t.contact.form.carModel.placeholder}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="service" className="block text-sm font-bold text-gray-700 mb-2">
-                      Dịch Vụ Cần Tư Vấn
+                      {t.contact.form.service.label}
                     </label>
                     <select
                       id="service"
@@ -221,20 +216,20 @@ export default function Contact() {
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-all bg-white"
                     >
-                      <option value="">Chọn dịch vụ</option>
-                      <option value="repair">Sửa Chữa Cơ Khí</option>
-                      <option value="diagnostic">Chẩn Đoán Điện Tử</option>
-                      <option value="upgrade">Nâng Cấp Hiệu Suất</option>
-                      <option value="maintenance">Bảo Dưỡng Định Kỳ</option>
-                      <option value="fuel">Hệ Thống Nhiên Liệu</option>
-                      <option value="cooling">Hệ Thống Làm Mát</option>
+                      <option value="">{t.contact.form.service.placeholder}</option>
+                      <option value="repair">{t.contact.form.service.options.repair}</option>
+                      <option value="diagnostic">{t.contact.form.service.options.diagnostic}</option>
+                      <option value="upgrade">{t.contact.form.service.options.upgrade}</option>
+                      <option value="maintenance">{t.contact.form.service.options.maintenance}</option>
+                      <option value="fuel">{t.contact.form.service.options.fuel}</option>
+                      <option value="cooling">{t.contact.form.service.options.cooling}</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-2">
-                    Mô Tả Vấn Đề
+                    {t.contact.form.message.label}
                   </label>
                   <textarea
                     id="message"
@@ -243,7 +238,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-all resize-none"
-                    placeholder="Mô tả chi tiết về tình trạng xe hoặc dịch vụ bạn quan tâm..."
+                    placeholder={t.contact.form.message.placeholder}
                   ></textarea>
                 </div>
 
@@ -252,7 +247,7 @@ export default function Contact() {
                   className="w-full bg-gradient-to-r from-[#E31E24] to-[#1B3A5F] text-white py-4 rounded-lg hover:from-[#c41820] hover:to-[#153049] transition-all transform hover:scale-105 font-bold flex items-center justify-center space-x-2 shadow-lg shadow-[#E31E24]/30"
                 >
                   <Send className="w-5 h-5" />
-                  <span>Gửi Yêu Cầu</span>
+                  <span>{t.contact.form.submit}</span>
                 </button>
               </form>
             )}
@@ -275,7 +270,7 @@ export default function Contact() {
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white px-6 py-3 rounded-full shadow-lg">
                 <span className="text-[#E31E24] font-bold flex items-center space-x-2">
                   <MapPin className="w-5 h-5" />
-                  <span>View on Google Maps</span>
+                  <span>{t.contact.viewOnMap}</span>
                 </span>
               </div>
             </div>
