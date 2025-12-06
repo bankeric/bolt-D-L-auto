@@ -218,17 +218,17 @@ export const translations = {
 
       reviews: [
         {
-          name: 'John Smith',
+          name: 'Alex Nguyễn',
           role: 'Toyota Camry Owner',
           content: 'My car was badly damaged in an accident, I thought it couldn\'t be fixed. But D&L Auto worked miracles! The car looks brand new, unbelievable. The team was very professional and dedicated.'
         },
         {
-          name: 'Sarah Johnson',
+          name: 'David',
           role: 'Honda Accord Owner',
           content: 'Reasonable prices, fast service. Most importantly, clear explanations about the car\'s condition and repair process. Very satisfied!'
         },
         {
-          name: 'Michael Chen',
+          name: 'Hùng Trần',
           role: 'Lexus Owner',
           content: 'Insurance was handled very smoothly, no worries at all. D&L Auto took care of everything. The car was repaired excellently, no trace of the accident.'
         },
@@ -623,17 +623,17 @@ export const translations = {
 
       reviews: [
         {
-          name: 'Anh Nguyễn Văn Hùng',
+          name: 'Alex Nguyễn',
           role: 'Chủ xe Toyota Camry',
           content: 'Xe tôi bị tai nạn nặng, tôi nghĩ không thể sửa được. Nhưng D&L Auto đã làm nên điều kỳ diệu! Xe như mới, không thể tin được. Đội ngũ rất chuyên nghiệp và tận tâm.'
         },
         {
-          name: 'Chị Trần Thị Mai',
+          name: 'David',
           role: 'Chủ xe Honda Accord',
           content: 'Giá cả hợp lý, làm việc nhanh chóng. Quan trọng nhất là có người nói tiếng Việt giải thích rõ ràng về tình trạng xe và quy trình sửa chữa. Rất hài lòng!'
         },
         {
-          name: 'Anh Lê Minh Tuấn',
+          name: 'Hùng Trần',
           role: 'Chủ xe Lexus',
           content: 'Bảo hiểm được xử lý rất suôn sẻ, không phải lo lắng gì. D&L Auto lo hết mọi thứ. Xe được sửa chữa tuyệt vời, không thấy vết tích gì của tai nạn.'
         },
@@ -1028,17 +1028,17 @@ export const translations = {
 
       reviews: [
         {
-          name: 'Juan García',
+          name: 'Alex Nguyễn',
           role: 'Propietario de Toyota Camry',
           content: 'Mi auto estaba muy dañado en un accidente, pensé que no se podía arreglar. ¡Pero D&L Auto hizo milagros! El auto se ve como nuevo, increíble. El equipo fue muy profesional y dedicado.'
         },
         {
-          name: 'María Rodríguez',
-          role: 'Propietaria de Honda Accord',
-          content: 'Precios razonables, servicio rápido. Lo más importante, explicaciones claras sobre la condición del auto y el proceso de reparación. ¡Muy satisfecha!'
+          name: 'David',
+          role: 'Propietario de Honda Accord',
+          content: 'Precios razonables, servicio rápido. Lo más importante, explicaciones claras sobre la condición del auto y el proceso de reparación. ¡Muy satisfecho!'
         },
         {
-          name: 'Carlos Martínez',
+          name: 'Hùng Trần',
           role: 'Propietario de Lexus',
           content: 'El seguro se manejó muy bien, sin preocupaciones en absoluto. D&L Auto se encargó de todo. El auto se reparó excelentemente, sin rastro del accidente.'
         },
