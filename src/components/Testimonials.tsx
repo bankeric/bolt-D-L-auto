@@ -32,6 +32,14 @@ export default function Testimonials() {
     {
       beforeImages: ['/testimonials/Chevrolet_before_1_1765070186543.jpeg'],
       afterImages: ['/testimonials/Chevrolet_after_1_1765070186544.jpeg']
+    },
+    {
+      beforeImages: ['/testimonials/Camry_before_1_1765071173041.jpeg', '/testimonials/Camry_before_2_1765071173045.jpeg', '/testimonials/Camry_before_3_1765071173043.jpeg'],
+      afterImages: ['/testimonials/Camry_after_1_1765071173044.jpeg', '/testimonials/Camry_after_2_1765071173042.jpeg', '/testimonials/Camry_after_3_1765071173044.jpeg', '/testimonials/Camry_after_4_1765071173046.jpeg']
+    },
+    {
+      beforeImages: ['/testimonials/Lexus_before_1_1765071221546.jpeg', '/testimonials/Lexus_before_2_1765071221543.jpeg', '/testimonials/Lexus_before_3_1765071221548.jpeg', '/testimonials/Lexus_before_4_1765071221545.jpeg'],
+      afterImages: ['/testimonials/Lexus_after_1_1765071221547.jpeg', '/testimonials/Lexus_after_2_1765071221544.jpeg', '/testimonials/Lexus_after_3_1765071221543.jpeg', '/testimonials/Lexus_after_4_1765071221546.jpeg']
     }
   ];
 

@@ -225,6 +225,14 @@ export const translations = {
         {
           title: 'Chevrolet Silverado - Front Grille Repair',
           description: 'Front end damage repair and grille replacement'
+        },
+        {
+          title: 'Toyota Camry - Rear End Collision Repair',
+          description: 'Complete rear end restoration after collision'
+        },
+        {
+          title: 'Lexus GX460 - Rear End Repair',
+          description: 'Professional rear bumper and tailgate restoration'
         }
       ],
 
@@ -652,6 +660,14 @@ export const translations = {
         {
           title: 'Chevrolet Silverado - Sửa Chữa Lưới Tản Nhiệt',
           description: 'Sửa chữa hư hỏng đầu xe và thay lưới tản nhiệt'
+        },
+        {
+          title: 'Toyota Camry - Sửa Chữa Va Chạm Đuôi Xe',
+          description: 'Phục hồi hoàn chỉnh đuôi xe sau va chạm'
+        },
+        {
+          title: 'Lexus GX460 - Sửa Chữa Đuôi Xe',
+          description: 'Phục hồi chuyên nghiệp cản sau và cửa hậu'
         }
       ],
 
@@ -1079,6 +1095,14 @@ export const translations = {
         {
           title: 'Chevrolet Silverado - Reparación de Parrilla Frontal',
           description: 'Reparación de daños frontales y reemplazo de parrilla'
+        },
+        {
+          title: 'Toyota Camry - Reparación de Colisión Trasera',
+          description: 'Restauración completa de la parte trasera después de colisión'
+        },
+        {
+          title: 'Lexus GX460 - Reparación Trasera',
+          description: 'Restauración profesional de parachoques trasero y portón'
         }
       ],
 
