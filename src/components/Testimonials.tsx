@@ -4,9 +4,28 @@ import { useTranslation } from '../hooks/useTranslation';
 export default function Testimonials() {
   const t = useTranslation();
 
+  const projectImages = [
+    {
+      beforeImages: ['/testimonials/Tesla_before_1_1765070114609.jpeg', '/testimonials/Tesla_before_2_1765070114609.jpeg'],
+      afterImages: ['/testimonials/Tesla_after_1765070114607.jpeg']
+    },
+    {
+      beforeImages: ['/testimonials/Toyota_before_1_1765070137567.jpeg', '/testimonials/Toyota_before_2_1765070137568.jpeg'],
+      afterImages: ['/testimonials/Toyota_after_1_1765070137568.jpeg', '/testimonials/Toyota_after_2_1765070137569.jpeg']
+    },
+    {
+      beforeImages: ['/testimonials/Audi_before_1_1765070164012.jpeg', '/testimonials/Audi_before_3_1765070164014.jpeg'],
+      afterImages: ['/testimonials/Audi_after_1_1765070164013.jpeg', '/testimonials/Audi_after_2_1765070164015.jpeg']
+    },
+    {
+      beforeImages: ['/testimonials/Chevrolet_before_1_1765070186543.jpeg'],
+      afterImages: ['/testimonials/Chevrolet_after_1_1765070186544.jpeg']
+    }
+  ];
+
   const beforeAfterProjects = t.testimonials.projects.map((project: any, index: number) => ({
-    beforeImage: [`/1a.jpg`, `/2a.jpg`, `/3a.jpg`][index],
-    afterImage: [`/1b.jpg`, `/2b.jpg`, `/3b.jpg`][index],
+    beforeImages: projectImages[index]?.beforeImages || [],
+    afterImages: projectImages[index]?.afterImages || [],
     title: project.title,
     description: project.description
   }));
@@ -28,31 +47,43 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {beforeAfterProjects.map((project, index) => (
             <div
               key={index}
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="relative">
-                <img
-                  src={project.beforeImage}
-                  alt={`${project.title} - Before`}
-                  className="w-full h-64 object-cover"
-                />
+                <div className="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded z-10">BEFORE</div>
+                <div className={`grid ${project.beforeImages.length > 1 ? 'grid-cols-2' : 'grid-cols-1'} gap-1`}>
+                  {project.beforeImages.map((img: string, imgIndex: number) => (
+                    <img
+                      key={imgIndex}
+                      src={img}
+                      alt={`${project.title} - Before ${imgIndex + 1}`}
+                      className="w-full h-32 object-cover"
+                    />
+                  ))}
+                </div>
               </div>
 
               <div className="relative">
-                <img
-                  src={project.afterImage}
-                  alt={`${project.title} - After`}
-                  className="w-full h-64 object-cover"
-                />
+                <div className="absolute top-2 left-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded z-10">AFTER</div>
+                <div className={`grid ${project.afterImages.length > 1 ? 'grid-cols-2' : 'grid-cols-1'} gap-1`}>
+                  {project.afterImages.map((img: string, imgIndex: number) => (
+                    <img
+                      key={imgIndex}
+                      src={img}
+                      alt={`${project.title} - After ${imgIndex + 1}`}
+                      className="w-full h-32 object-cover"
+                    />
+                  ))}
+                </div>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600">{project.description}</p>
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-1">{project.title}</h3>
+                <p className="text-gray-600 text-sm">{project.description}</p>
               </div>
             </div>
           ))}

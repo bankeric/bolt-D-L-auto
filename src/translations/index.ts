@@ -199,16 +199,20 @@ export const translations = {
 
       projects: [
         {
-          title: 'Toyota Camry - Body Repair',
-          description: 'Severe collision repair, restored like new'
+          title: 'Tesla - Front End Repair',
+          description: 'Professional front end collision repair, restored to factory condition'
         },
         {
-          title: 'Range Rover Evoque - Rear End Repair',
-          description: 'Complete restoration of rear end after accident'
+          title: 'Toyota Corolla - Side Collision Repair',
+          description: 'Complete side panel restoration after collision'
         },
         {
-          title: 'Ford Mustang - Collision Repair',
-          description: 'Full restoration and repaint after severe collision'
+          title: 'Audi - Wheel Well Repair & Paint',
+          description: 'Rust repair and professional paint restoration'
+        },
+        {
+          title: 'Chevrolet Silverado - Front Grille Repair',
+          description: 'Front end damage repair and grille replacement'
         }
       ],
 
@@ -220,31 +224,37 @@ export const translations = {
         {
           name: 'Alex Nguyễn',
           role: 'Toyota Camry Owner',
+          rating: 5,
           content: 'My car was badly damaged in an accident, I thought it couldn\'t be fixed. But D&L Auto worked miracles! The car looks brand new, unbelievable. The team was very professional and dedicated.'
         },
         {
           name: 'David',
           role: 'Honda Accord Owner',
+          rating: 5,
           content: 'Reasonable prices, fast service. Most importantly, clear explanations about the car\'s condition and repair process. Very satisfied!'
         },
         {
           name: 'Hùng Trần',
           role: 'Lexus Owner',
+          rating: 5,
           content: 'Insurance was handled very smoothly, no worries at all. D&L Auto took care of everything. The car was repaired excellently, no trace of the accident.'
         },
         {
           name: 'Lisa Rodriguez',
           role: 'Subaru Owner',
+          rating: 5,
           content: 'First time I found a trustworthy auto shop in Boston. Friendly staff, transparent pricing. Car was returned on time and better than expected!'
         },
         {
           name: 'David Williams',
           role: 'Toyota RAV4 Owner',
+          rating: 5,
           content: 'D&L Auto had rental cars available immediately so I wasn\'t disrupted from work. Skilled technicians, modern equipment. I will recommend to friends.'
         },
         {
           name: 'Jennifer Martinez',
           role: 'Mazda CX-5 Owner',
+          rating: 5,
           content: 'Very thorough consultation, no pressure. They explained each repair step and showed pictures. Reasonable price for the quality received. Clean, professional shop.'
         }
       ],
@@ -604,16 +614,20 @@ export const translations = {
 
       projects: [
         {
-          title: 'Toyota Camry - Body Repair',
-          description: 'Sửa chữa va chạm nghiêm trọng, phục hồi như mới'
+          title: 'Tesla - Sửa Chữa Đầu Xe',
+          description: 'Sửa chữa va chạm đầu xe chuyên nghiệp, phục hồi như mới'
         },
         {
-          title: 'Range Rover Evoque - Rear End Repair',
-          description: 'Khôi phục hoàn toàn phần đuôi xe sau tai nạn'
+          title: 'Toyota Corolla - Sửa Chữa Va Chạm Bên Hông',
+          description: 'Khôi phục hoàn toàn panel bên hông sau va chạm'
         },
         {
-          title: 'Ford Mustang - Collision Repair',
-          description: 'Phục hồi và sơn lại toàn bộ sau va chạm nghiêm trọng'
+          title: 'Audi - Sửa Chữa Vòm Bánh & Sơn',
+          description: 'Sửa chữa rỉ sét và phục hồi sơn chuyên nghiệp'
+        },
+        {
+          title: 'Chevrolet Silverado - Sửa Chữa Lưới Tản Nhiệt',
+          description: 'Sửa chữa hư hỏng đầu xe và thay lưới tản nhiệt'
         }
       ],
 
@@ -625,31 +639,37 @@ export const translations = {
         {
           name: 'Alex Nguyễn',
           role: 'Chủ xe Toyota Camry',
+          rating: 5,
           content: 'Xe tôi bị tai nạn nặng, tôi nghĩ không thể sửa được. Nhưng D&L Auto đã làm nên điều kỳ diệu! Xe như mới, không thể tin được. Đội ngũ rất chuyên nghiệp và tận tâm.'
         },
         {
           name: 'David',
           role: 'Chủ xe Honda Accord',
+          rating: 5,
           content: 'Giá cả hợp lý, làm việc nhanh chóng. Quan trọng nhất là có người nói tiếng Việt giải thích rõ ràng về tình trạng xe và quy trình sửa chữa. Rất hài lòng!'
         },
         {
           name: 'Hùng Trần',
           role: 'Chủ xe Lexus',
+          rating: 5,
           content: 'Bảo hiểm được xử lý rất suôn sẻ, không phải lo lắng gì. D&L Auto lo hết mọi thứ. Xe được sửa chữa tuyệt vời, không thấy vết tích gì của tai nạn.'
         },
         {
           name: 'Chị Phạm Thu Hương',
           role: 'Chủ xe Subaru',
+          rating: 5,
           content: 'Lần đầu tiên tôi tìm thấy xưởng sửa xe đáng tin cậy ở Boston. Nhân viên thân thiện, giá cả minh bạch. Xe được trả lại đúng hẹn và đẹp hơn cả mong đợi!'
         },
         {
           name: 'Anh Đỗ Văn Thành',
           role: 'Chủ xe Toyota RAV4',
+          rating: 5,
           content: 'D&L Auto có dịch vụ xe rental ngay lập tức nên tôi không bị gián đoạn công việc. Đội ngũ kỹ thuật giỏi, thiết bị hiện đại. Tôi sẽ giới thiệu cho bạn bè.'
         },
         {
           name: 'Chị Vũ Thị Lan',
           role: 'Chủ xe Mazda CX-5',
+          rating: 5,
           content: 'Tư vấn rất kỹ, không ép buộc. Họ giải thích từng bước sửa chữa và cho xem hình ảnh. Giá cả hợp lý so với chất lượng nhận được. Xưởng sạch sẽ, chuyên nghiệp.'
         }
       ],
@@ -1009,16 +1029,20 @@ export const translations = {
 
       projects: [
         {
-          title: 'Toyota Camry - Reparación de Carrocería',
-          description: 'Reparación de colisión severa, restaurado como nuevo'
+          title: 'Tesla - Reparación Frontal',
+          description: 'Reparación profesional de colisión frontal, restaurado a condición de fábrica'
         },
         {
-          title: 'Range Rover Evoque - Reparación Trasera',
-          description: 'Restauración completa de la parte trasera después del accidente'
+          title: 'Toyota Corolla - Reparación de Colisión Lateral',
+          description: 'Restauración completa de panel lateral después de colisión'
         },
         {
-          title: 'Ford Mustang - Reparación de Colisión',
-          description: 'Restauración completa y repintado después de colisión severa'
+          title: 'Audi - Reparación de Guardabarros y Pintura',
+          description: 'Reparación de óxido y restauración profesional de pintura'
+        },
+        {
+          title: 'Chevrolet Silverado - Reparación de Parrilla Frontal',
+          description: 'Reparación de daños frontales y reemplazo de parrilla'
         }
       ],
 
@@ -1030,31 +1054,37 @@ export const translations = {
         {
           name: 'Alex Nguyễn',
           role: 'Propietario de Toyota Camry',
+          rating: 5,
           content: 'Mi auto estaba muy dañado en un accidente, pensé que no se podía arreglar. ¡Pero D&L Auto hizo milagros! El auto se ve como nuevo, increíble. El equipo fue muy profesional y dedicado.'
         },
         {
           name: 'David',
           role: 'Propietario de Honda Accord',
+          rating: 5,
           content: 'Precios razonables, servicio rápido. Lo más importante, explicaciones claras sobre la condición del auto y el proceso de reparación. ¡Muy satisfecho!'
         },
         {
           name: 'Hùng Trần',
           role: 'Propietario de Lexus',
+          rating: 5,
           content: 'El seguro se manejó muy bien, sin preocupaciones en absoluto. D&L Auto se encargó de todo. El auto se reparó excelentemente, sin rastro del accidente.'
         },
         {
           name: 'Ana López',
           role: 'Propietaria de Subaru',
+          rating: 5,
           content: '¡Primera vez que encuentro un taller confiable en Boston! Personal amable, precios transparentes. ¡El auto fue devuelto a tiempo y mejor de lo esperado!'
         },
         {
           name: 'Roberto Hernández',
           role: 'Propietario de Toyota RAV4',
+          rating: 5,
           content: 'D&L Auto tenía autos de alquiler disponibles de inmediato, así que no se interrumpió mi trabajo. Técnicos capacitados, equipo moderno. Recomendaré a mis amigos.'
         },
         {
           name: 'Laura Sánchez',
           role: 'Propietaria de Mazda CX-5',
+          rating: 5,
           content: 'Consulta muy completa, sin presión. Explicaron cada paso de reparación y mostraron fotos. Precio razonable por la calidad recibida. Taller limpio y profesional.'
         }
       ],
