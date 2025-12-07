@@ -199,6 +199,18 @@ export const translations = {
 
       projects: [
         {
+          title: 'Toyota Camry - Body Repair',
+          description: 'Severe collision repair, restored like new'
+        },
+        {
+          title: 'Range Rover Evoque - Rear End Repair',
+          description: 'Complete restoration of rear end after accident'
+        },
+        {
+          title: 'Ford Mustang - Collision Repair',
+          description: 'Full restoration and repaint after severe collision'
+        },
+        {
           title: 'Tesla - Front End Repair',
           description: 'Professional front end collision repair, restored to factory condition'
         },
@@ -614,6 +626,18 @@ export const translations = {
 
       projects: [
         {
+          title: 'Toyota Camry - Body Repair',
+          description: 'Sửa chữa va chạm nghiêm trọng, phục hồi như mới'
+        },
+        {
+          title: 'Range Rover Evoque - Rear End Repair',
+          description: 'Khôi phục hoàn toàn phần đuôi xe sau tai nạn'
+        },
+        {
+          title: 'Ford Mustang - Collision Repair',
+          description: 'Phục hồi và sơn lại toàn bộ sau va chạm nghiêm trọng'
+        },
+        {
           title: 'Tesla - Sửa Chữa Đầu Xe',
           description: 'Sửa chữa va chạm đầu xe chuyên nghiệp, phục hồi như mới'
         },
@@ -1028,6 +1052,18 @@ export const translations = {
       subtitle: 'Restaurando VIEJO a NUEVO - Profesional en cada detalle',
 
       projects: [
+        {
+          title: 'Toyota Camry - Reparación de Carrocería',
+          description: 'Reparación de colisión severa, restaurado como nuevo'
+        },
+        {
+          title: 'Range Rover Evoque - Reparación Trasera',
+          description: 'Restauración completa de la parte trasera después del accidente'
+        },
+        {
+          title: 'Ford Mustang - Reparación de Colisión',
+          description: 'Restauración completa y repintado después de colisión severa'
+        },
         {
           title: 'Tesla - Reparación Frontal',
           description: 'Reparación profesional de colisión frontal, restaurado a condición de fábrica'

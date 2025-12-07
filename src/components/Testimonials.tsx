@@ -6,6 +6,18 @@ export default function Testimonials() {
 
   const projectImages = [
     {
+      beforeImages: ['/1a.jpg'],
+      afterImages: ['/1b.jpg']
+    },
+    {
+      beforeImages: ['/2a.jpg'],
+      afterImages: ['/2b.jpg']
+    },
+    {
+      beforeImages: ['/3a.jpg'],
+      afterImages: ['/3b.jpg']
+    },
+    {
       beforeImages: ['/testimonials/Tesla_before_1_1765070114609.jpeg', '/testimonials/Tesla_before_2_1765070114609.jpeg'],
       afterImages: ['/testimonials/Tesla_after_1765070114607.jpeg']
     },
@@ -47,7 +59,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-20">
           {beforeAfterProjects.map((project, index) => (
             <div
               key={index}
