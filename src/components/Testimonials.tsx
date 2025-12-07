@@ -73,32 +73,26 @@ export default function Testimonials() {
               key={index}
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
-              <div className="relative">
-                <div className="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded z-10">BEFORE</div>
-                <div className={`grid ${project.beforeImages.length > 1 ? 'grid-cols-2' : 'grid-cols-1'} gap-1`}>
-                  {project.beforeImages.map((img: string, imgIndex: number) => (
-                    <img
-                      key={imgIndex}
-                      src={img}
-                      alt={`${project.title} - Before ${imgIndex + 1}`}
-                      className="w-full h-32 object-cover"
-                    />
-                  ))}
-                </div>
+              <div className={`grid ${project.beforeImages.length > 1 ? 'grid-cols-2' : 'grid-cols-1'} gap-1`}>
+                {project.beforeImages.map((img: string, imgIndex: number) => (
+                  <img
+                    key={imgIndex}
+                    src={img}
+                    alt={`${project.title} - Before ${imgIndex + 1}`}
+                    className="w-full h-32 object-cover"
+                  />
+                ))}
               </div>
 
-              <div className="relative">
-                <div className="absolute top-2 left-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded z-10">AFTER</div>
-                <div className={`grid ${project.afterImages.length > 1 ? 'grid-cols-2' : 'grid-cols-1'} gap-1`}>
-                  {project.afterImages.map((img: string, imgIndex: number) => (
-                    <img
-                      key={imgIndex}
-                      src={img}
-                      alt={`${project.title} - After ${imgIndex + 1}`}
-                      className="w-full h-32 object-cover"
-                    />
-                  ))}
-                </div>
+              <div className={`grid ${project.afterImages.length > 1 ? 'grid-cols-2' : 'grid-cols-1'} gap-1`}>
+                {project.afterImages.map((img: string, imgIndex: number) => (
+                  <img
+                    key={imgIndex}
+                    src={img}
+                    alt={`${project.title} - After ${imgIndex + 1}`}
+                    className="w-full h-32 object-cover"
+                  />
+                ))}
               </div>
 
               <div className="p-4">
