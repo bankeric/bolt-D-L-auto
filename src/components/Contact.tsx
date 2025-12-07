@@ -54,7 +54,8 @@ export default function Contact() {
       subContent: t.contact.info.phoneLine2,
       thirdContent: t.contact.info.phoneLine3,
       color: 'text-[#1B3A5F]',
-      bgColor: 'bg-[#1B3A5F]/10'
+      bgColor: 'bg-[#1B3A5F]/10',
+      strokeWidth: 2.5
     },
     {
       icon: Mail,
@@ -62,7 +63,8 @@ export default function Contact() {
       content: t.contact.info.emailLine1,
       subContent: t.contact.info.emailLine2,
       color: 'text-[#1B3A5F]',
-      bgColor: 'bg-[#1B3A5F]/10'
+      bgColor: 'bg-[#1B3A5F]/10',
+      strokeWidth: 2.5
     },
     {
       icon: Clock,
@@ -97,7 +99,7 @@ export default function Contact() {
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start space-x-4 group">
                     <div className={`flex-shrink-0 p-3 ${info.bgColor} ${info.color} rounded-xl group-hover:scale-110 transition-transform duration-300`}>
-                      <info.icon className="w-6 h-6" />
+                      <info.icon className="w-6 h-6" strokeWidth={info.strokeWidth || 2} />
                     </div>
                     <div>
                       <div className="font-bold text-gray-300 mb-1">{info.title}</div>
